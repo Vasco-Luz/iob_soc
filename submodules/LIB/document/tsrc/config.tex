@@ -1,0 +1,23 @@
+This section describes how the IP core can be configured by means of
+Table~\ref{tab:confs}. The core may be configured using parameters or
+macros. The parameters are passed to each instance of the core and only affect
+that instance. The macros apply to all instances of the core. The macros and
+parameters have the following types:
+
+\begin{description}
+\item \textbf{'M'} Valued Macro: the value of the macro dictates the way the core is built.
+\item \textbf{'P'} True Parameter: the value of the parameter influences how the core instance that receives is built.
+\end{description}
+
+\begin{xltabular}{\textwidth}{|l|c|c|c|c|X|} \hline
+    \rowcolor{iob-green}
+    {\bf Macro} & {\bf Type} & {\bf Min} & {\bf Typical} & {\bf Max} & {\bf Description}
+    \\ \hline \hline
+    \input confs_tab
+    \caption{Configuration Macros.}\label{tab:confs}
+\end{xltabular}
+
+There are derived parameters that are used to configure the core instances.
+Although they appear as normal ones, they should not be changed by the user,
+as they are automatically set by the core. These parameters are:
+\input derived_params
